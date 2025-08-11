@@ -1,236 +1,370 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
 
 <head>
-    <meta charset='UTF-8'>
-    <title>Mapa dos Sonhos - Roadmap Estilizado</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa dos Sonhos</title>
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        h2 {
-            background-color: #3498db;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f4f8ff', 100: '#e9f0ff', 200: '#cddfff', 300: '#a9c6ff',
+              400: '#6c9dff', 500: '#3b82f6', 600: '#2162d8', 700: '#1b4fab',
+              800: '#173f87', 900: '#132f63', 950: '#0f172a',
+            }
+          },
         }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-            background-color: white;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            background-color: #2980b9;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        td:first-child {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .category-icon {
-            width: 24px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-    </style>
+    section[data-route]:not(.active) {
+      display: none;
+    }
+  </style>
 </head>
 
-<body>
-    <h1>🗺 Mapa dos Sonhos - Roadmap Estilizado</h1>
-    <h2>🖥 Trabalho / Carreira</h2>
-    <table>
-        <tr>
-            <th>Objetivo</th>
-            <th>Prazo</th>
-            <th>Ações Imediatas (0-30 dias)</th>
-            <th>Médio Prazo (1-6 meses)</th>
-            <th>Longo Prazo (6-18 meses)</th>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/841/841364.png' class='category-icon'>Lançar site/app
-                monetizado até dez/2026</td>
-            <td>dez/2026</td>
-            <td>Definir nicho e registrar domínio</td>
-            <td>Criar MVP e testar com usuários</td>
-            <td>Escalar e automatizar manutenção</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/1828/1828884.png' class='category-icon'>Manter blog
-                profissional com 1 artigo/mês</td>
-            <td>Definir</td>
-            <td>Definir plataforma e criar lista de temas</td>
-            <td>Publicar 1 artigo/mês e divulgar</td>
-            <td>Criar e-book ou curso</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' class='category-icon'>Criar empresa
-                sustentável até jun/2027</td>
-            <td>jun/2027</td>
-            <td>Definir nicho e nome</td>
-            <td>Formalizar CNPJ e conquistar clientes</td>
-            <td>Escalar operação e equipe</td>
-        </tr>
-    </table>
-    <h2>🌎 Diversão</h2>
-    <table>
-        <tr>
-            <th>Objetivo</th>
-            <th>Prazo</th>
-            <th>Ações Imediatas (0-30 dias)</th>
-            <th>Médio Prazo (1-6 meses)</th>
-            <th>Longo Prazo (6-18 meses)</th>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/3062/3062634.png' class='category-icon'>Viagem
-                internacional cultural até dez/2026</td>
-            <td>dez/2026</td>
-            <td>Escolher país e criar orçamento</td>
-            <td>Reservar passagens e hospedagem</td>
-            <td>Preparar documentos e seguro</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/741/741407.png' class='category-icon'>Viagem de moto 7+
-                dias até out/2025</td>
-            <td>out/2025</td>
-            <td>Escolher destino e revisar moto</td>
-            <td>Treinar resistência e comprar equipamentos</td>
-            <td>Revisão final e viagem</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/727/727245.png' class='category-icon'>Evento
-                internacional de música até dez/2027</td>
-            <td>dez/2027</td>
-            <td>Escolher evento e orçamento</td>
-            <td>Comprar ingresso e reservar hospedagem</td>
-            <td>Turismo complementar</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/415/415733.png' class='category-icon'>Conhecer a neve
-                até jul/2027</td>
-            <td>jul/2027</td>
-            <td>Escolher destino e data</td>
-            <td>Comprar roupas térmicas</td>
-            <td>Reservar passeios</td>
-        </tr>
-    </table>
-    <h2>🤝 Amigos / Família</h2>
-    <table>
-        <tr>
-            <th>Objetivo</th>
-            <th>Prazo</th>
-            <th>Ações Imediatas (0-30 dias)</th>
-            <th>Médio Prazo (1-6 meses)</th>
-            <th>Longo Prazo (6-18 meses)</th>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/1946/1946429.png' class='category-icon'>Viagem com
-                amigo até jun/2026</td>
-            <td>jun/2026</td>
-            <td>Escolher amigo e destino</td>
-            <td>Reservar transporte e hospedagem</td>
-            <td>Planejar atividades</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/747/747376.png' class='category-icon'>Tradição anual
-                com amigos/família</td>
-            <td>Definir</td>
-            <td>Definir formato e data</td>
-            <td>Confirmar presença</td>
-            <td>Repetir evento todo ano</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/1946/1946436.png' class='category-icon'>Bom
-                relacionamento familiar</td>
-            <td>Definir</td>
-            <td>Marcar primeiro encontro</td>
-            <td>Contato mensal ativo</td>
-            <td>Criar tradições familiares</td>
-        </tr>
-    </table>
-    <h2>💪 Saúde / Bem-Estar</h2>
-    <table>
-        <tr>
-            <th>Objetivo</th>
-            <th>Prazo</th>
-            <th>Ações Imediatas (0-30 dias)</th>
-            <th>Médio Prazo (1-6 meses)</th>
-            <th>Longo Prazo (6-18 meses)</th>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/1046/1046784.png' class='category-icon'>Academia 4x por
-                semana até dez/2025</td>
-            <td>dez/2025</td>
-            <td>Escolher academia e rotina</td>
-            <td>Acompanhar evolução</td>
-            <td>Tornar treino hábito vitalício</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/1653/1653630.png' class='category-icon'>Correr maratona
-                até out/2026</td>
-            <td>out/2026</td>
-            <td>Escolher prova e fazer avaliação</td>
-            <td>Seguir planilha e provas menores</td>
-            <td>Correr maratona</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/2907/2907311.png' class='category-icon'>Mais
-                flexibilidade até dez/2025</td>
-            <td>dez/2025</td>
-            <td>Alongar após treino</td>
-            <td>Rotina de yoga 3x semana</td>
-            <td>Alongar sempre</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/4149/4149673.png' class='category-icon'>Reduzir gordura
-                abdominal até dez/2025</td>
-            <td>dez/2025</td>
-            <td>Ajustar dieta e treinar força</td>
-            <td>Acompanhar evolução</td>
-            <td>Manter percentual saudável</td>
-        </tr>
-        <tr>
-            <td><img src='https://cdn-icons-png.flaticon.com/512/2784/2784593.png' class='category-icon'>Meditar 5x por
-                semana até dez/2025</td>
-            <td>dez/2025</td>
-            <td>Baixar app e definir horário</td>
-            <td>Aumentar tempo gradualmente</td>
-            <td>Hábito natural</td>
-        </tr>
-    </table>
+<body class="h-full font-sans bg-gray-100 dark:bg-brand-950 text-gray-800 dark:text-gray-200">
+  <div class="min-h-screen flex">
+
+    <aside id="sidebar"
+      class="hidden md:flex md:flex-col w-72 shrink-0 border-r border-gray-200/80 dark:border-white/10 bg-white/50 dark:bg-gray-900/40 backdrop-blur-md">
+      <div class="p-5 border-b border-gray-200/80 dark:border-white/10">
+        <h1 class="text-xl font-extrabold tracking-tight">MAPA DOS SONHOS</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Seu roadmap estratégico</p>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-4">
+        <p class="px-2 py-2 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Navegação
+        </p>
+        <ul id="navList" class="space-y-1">
+          <li><a href="#overview" data-route-link
+              class="navlink block px-3 py-2 transition-colors duration-200 hover:bg-gray-200/60 dark:hover:bg-white/10">Visão
+              Geral</a></li>
+          <li class="pt-3">
+            <p class="px-2 py-2 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              Categorias</p>
+          </li>
+          <li><a href="#trabalho" data-route-link
+              class="navlink block px-3 py-2 transition-colors duration-200 hover:bg-gray-200/60 dark:hover:bg-white/10">🖥
+              Trabalho / Carreira</a></li>
+          <li><a href="#diversao" data-route-link
+              class="navlink block px-3 py-2 transition-colors duration-200 hover:bg-gray-200/60 dark:hover:bg-white/10">🌎
+              Diversão</a></li>
+          <li><a href="#amigos" data-route-link
+              class="navlink block px-3 py-2 transition-colors duration-200 hover:bg-gray-200/60 dark:hover:bg-white/10">🤝
+              Amigos & Família</a></li>
+          <li><a href="#saude" data-route-link
+              class="navlink block px-3 py-2 transition-colors duration-200 hover:bg-gray-200/60 dark:hover:bg-white/10">💪
+              Saúde & Bem-estar</a></li>
+        </ul>
+      </nav>
+      <div class="p-4 border-t border-gray-200/80 dark:border-white/10 text-xs text-gray-500 dark:text-gray-400">
+        <p>Atualize mensalmente • Foque no próximo passo</p>
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col">
+      <header
+        class="sticky top-0 z-10 bg-gray-100/80 dark:bg-brand-950/70 backdrop-blur-md border-b border-gray-200/80 dark:border-white/10">
+        <div class="flex items-center justify-between px-4 md:px-6 py-3">
+          <div class="flex items-center gap-3">
+            <button id="toggleMenu"
+              class="md:hidden inline-flex items-center justify-center h-10 w-10 border border-gray-300 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+            <div>
+              <h2 id="pageTitle" class="text-lg md:text-xl font-bold tracking-tight">Visão Geral</h2>
+              <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">Você está em: <span id="breadcrumb"
+                  class="font-medium text-gray-700 dark:text-gray-300">Visão Geral</span></p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button id="themeToggle"
+              class="relative inline-flex items-center justify-center h-10 w-10 border border-gray-300 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/5 text-gray-500 dark:text-gray-400">
+              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 hidden dark:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              </svg>
+            </button>
+            <span id="now" class="hidden md:block text-sm text-gray-500 dark:text-gray-400"></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="p-4 md:p-6 lg:p-8 space-y-12">
+
+        <section id="overview" data-route class="active">
+          <div class="grid gap-8 lg:grid-cols-3">
+            <article
+              class="lg:col-span-2 p-8 flex flex-col justify-center bg-gray-200 dark:bg-gray-900 bg-[radial-gradient(theme(colors.gray.300)_1px,transparent_1px)] dark:bg-[radial-gradient(theme(colors.white)_0.5px,transparent_0.5px)] [background-size:16px_16px]">
+              <h3 class="text-2xl md:text-3xl font-extrabold tracking-tighter mb-2 text-gray-900 dark:text-white">Seu
+                Roteiro para o Extraordinário</h3>
+              <p class="text-gray-600 dark:text-gray-300 max-w-xl">Um plano de ação vivo para transformar sonhos em
+                realidade, um passo de cada vez. Use este mapa como sua bússola.</p>
+              <a href="#trabalho"
+                class="inline-block mt-6 bg-brand-500 text-white font-semibold px-5 py-2 hover:bg-brand-600 transition-colors w-auto max-w-max">Começar
+                a planejar 🚀</a>
+            </article>
+
+            <article class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-6">
+              <h3 class="text-lg font-bold tracking-tight mb-4">Progresso Geral</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5 font-medium"><span>Trabalho</span><span
+                      class="text-brand-600 dark:text-brand-400">30%</span></div>
+                  <div class="h-2 w-full bg-gray-200/70 dark:bg-white/10">
+                    <div class="h-2 w-[30%] bg-brand-500"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5 font-medium"><span>Diversão</span><span
+                      class="text-brand-600 dark:text-brand-400">20%</span></div>
+                  <div class="h-2 w-full bg-gray-200/70 dark:bg-white/10">
+                    <div class="h-2 w-[20%] bg-brand-500"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5 font-medium"><span>Amigos & Família</span><span
+                      class="text-brand-600 dark:text-brand-400">10%</span></div>
+                  <div class="h-2 w-full bg-gray-200/70 dark:bg-white/10">
+                    <div class="h-2 w-[10%] bg-brand-500"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1.5 font-medium"><span>Saúde</span><span
+                      class="text-brand-600 dark:text-brand-400">25%</span></div>
+                  <div class="h-2 w-full bg-gray-200/70 dark:bg-white/10">
+                    <div class="h-2 w-[25%] bg-brand-500"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <template id="cardTemplate">
+          <div
+            class="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative h-40 overflow-hidden">
+              <img class="card-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="" alt="">
+              <div
+                class="card-fallback hidden absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800">
+                <svg class="w-10 h-10 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 00-2.828 0L6 14m6-6a3 3 0 11-6 0 3 3 0 016 0z">
+                  </path>
+                </svg>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h4 class="card-title font-bold text-lg tracking-tight mb-2 text-gray-900 dark:text-white">
+                <span class="sr-only">Título do cartão</span>
+              </h4>
+              <span class="card-deadline text-[11px] font-semibold px-2 py-0.5"></span>
+              <ul class="mt-4 text-sm space-y-2 text-gray-600 dark:text-gray-300">
+              </ul>
+            </div>
+          </div>
+        </template>
+
+        <section id="trabalho" data-route>
+          <h3 class="text-2xl font-bold tracking-tight mb-6 border-b border-gray-300 dark:border-white/10 pb-2">🖥
+            Trabalho / Carreira</h3>
+          <div id="trabalho-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        </section>
+
+        <section id="diversao" data-route>
+          <h3 class="text-2xl font-bold tracking-tight mb-6 border-b border-gray-300 dark:border-white/10 pb-2">🌎
+            Diversão</h3>
+          <div id="diversao-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        </section>
+
+        <section id="amigos" data-route>
+          <h3 class="text-2xl font-bold tracking-tight mb-6 border-b border-gray-300 dark:border-white/10 pb-2">🤝
+            Amigos & Família</h3>
+          <div id="amigos-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        </section>
+
+        <section id="saude" data-route>
+          <h3 class="text-2xl font-bold tracking-tight mb-6 border-b border-gray-300 dark:border-white/10 pb-2">💪 Saúde
+            & Bem-estar</h3>
+          <div id="saude-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // --- DATA ---
+    const cardData = {
+      trabalho: [
+        // URL INTENCIONALMENTE QUEBRADA PARA DEMONSTRAR O FALLBACK
+        { img: `https://images.unsplash.com/invalid-url.jpg`, title: "Lançar site/app monetizado", deadline: { text: "dez/2026", color: "brand" }, steps: ["Definir nicho e registrar domínio", "Criar MVP e testar com usuários", "Escalar e automatizar manutenção"] },
+        { img: `https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Manter blog profissional", deadline: { text: "contínuo", color: "gray" }, steps: ["Definir plataforma e criar lista de temas", "Publicar 1 artigo/mês e divulgar", "Criar e-book ou curso"] },
+        { img: `https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Criar empresa sustentável", deadline: { text: "jun/2027", color: "brand" }, steps: ["Definir nicho e nome", "Formalizar CNPJ e conquistar clientes", "Escalar operação e equipe"] },
+      ],
+      diversao: [
+        { img: `https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Viagem internacional cultural", deadline: { text: "dez/2026", color: "brand" }, steps: ["Escolher país e criar orçamento", "Reservar passagens e hospedagem", "Preparar documentos e seguro"] },
+        { img: `https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Viagem de moto 7+ dias", deadline: { text: "out/2025", color: "brand" }, steps: ["Escolher destino e revisar moto", "Treinar resistência e comprar equipamentos", "Revisão final e viagem"] },
+        { img: `https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Evento internacional de música", deadline: { text: "dez/2027", color: "gray" }, steps: ["Escolher evento e orçamento", "Comprar ingresso e reservar hospedagem", "Turismo complementar"] },
+        { img: `https://images.unsplash.com/photo-1549472539-b1c1f1b62af3?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Conhecer a neve", deadline: { text: "jul/2027", color: "gray" }, steps: ["Escolher destino e data", "Comprar roupas térmicas", "Reservar passeios"] },
+      ],
+      amigos: [
+        { img: `https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Viagem com amigo", deadline: { text: "jun/2026", color: "brand" }, steps: ["Escolher amigo e destino", "Reservar transporte e hospedagem", "Planejar atividades"] },
+        { img: `https://images.unsplash.com/photo-1529333166437-77501bd39539?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Tradição anual", deadline: { text: "contínuo", color: "gray" }, steps: ["Definir formato e data", "Confirmar presença", "Repetir evento todo ano"] },
+        { img: `https://images.unsplash.com/photo-1619443258211-995939332249?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Bom relacionamento familiar", deadline: { text: "contínuo", color: "gray" }, steps: ["Marcar primeiro encontro", "Contato mensal ativo", "Criar tradições familiares"] },
+      ],
+      saude: [
+        { img: `https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Academia 4x/sem", deadline: { text: "dez/2025", color: "brand" }, steps: ["Escolher academia e rotina", "Acompanhar evolução", "Tornar hábito vitalício"] },
+        { img: `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Correr maratona", deadline: { text: "out/2026", color: "brand" }, steps: ["Escolher prova e avaliação", "Planilha + provas menores", "Correr maratona"] },
+        { img: `https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Mais flexibilidade", deadline: { text: "dez/2025", color: "brand" }, steps: ["Alongar após treino", "Yoga 3x/sem", "Alongar sempre"] },
+        { img: `https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Reduzir gordura abdominal", deadline: { text: "dez/2025", color: "brand" }, steps: ["Dieta + treino de força", "Acompanhar evolução", "Manter percentual saudável"] },
+        { img: `https://images.unsplash.com/photo-1591291621229-d10205834f3b?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800`, title: "Meditar 5x/sem", deadline: { text: "dez/2025", color: "brand" }, steps: ["App + horário fixo", "Aumentar tempo", "Hábito natural"] },
+      ]
+    };
+
+    // --- UI ELEMENTS & ROUTES ---
+    const pageTitle = document.getElementById('pageTitle'), breadcrumb = document.getElementById('breadcrumb'), sections = document.querySelectorAll('section[data-route]'), navLinks = document.querySelectorAll('[data-route-link]'), sidebar = document.getElementById('sidebar'), toggleMenu = document.getElementById('toggleMenu'), nowEl = document.getElementById('now'), themeToggle = document.getElementById('themeToggle');
+    const routes = { overview: { title: "Visão Geral" }, trabalho: { title: "Trabalho / Carreira" }, diversao: { title: "Diversão" }, amigos: { title: "Amigos & Família" }, saude: { title: "Saúde & Bem-estar" }, };
+
+    // --- FUNCTIONS ---
+    function renderCards() {
+      const template = document.getElementById('cardTemplate');
+      const stepIcons = ["▸", "▸", "▸"];
+
+      for (const category in cardData) {
+        const grid = document.getElementById(`${category}-grid`);
+        if (!grid) continue;
+
+        grid.innerHTML = '';
+        cardData[category].forEach(card => {
+          const cardClone = template.content.cloneNode(true);
+          const imgEl = cardClone.querySelector('.card-image');
+
+          imgEl.src = card.img;
+          imgEl.alt = card.title;
+
+          // *** NOVO: LÓGICA DE FALLBACK ***
+          imgEl.onerror = function () {
+            this.style.display = 'none'; // Esconde a imagem quebrada
+            const fallbackEl = this.nextElementSibling;
+            if (fallbackEl && fallbackEl.classList.contains('card-fallback')) {
+              fallbackEl.style.display = 'flex'; // Mostra o gradiente
+            }
+          };
+
+          cardClone.querySelector('.card-title').textContent = card.title;
+          const deadlineEl = cardClone.querySelector('.card-deadline');
+          deadlineEl.textContent = `Prazo: ${card.deadline.text}`;
+          if (card.deadline.color === 'brand') {
+            deadlineEl.classList.add('bg-brand-100', 'text-brand-800', 'dark:bg-brand-500/20', 'dark:text-brand-300');
+          } else {
+            deadlineEl.classList.add('bg-gray-200', 'text-gray-800', 'dark:bg-white/10', 'dark:text-white/80');
+          }
+
+          const listEl = cardClone.querySelector('ul');
+          listEl.innerHTML = card.steps.map((step, index) => `
+                    <li class="flex gap-2">
+                        <span class="text-brand-400">${stepIcons[index % stepIcons.length]}</span>
+                        <span><b>${['Imediato', 'Médio', 'Longo'][index]}:</b> ${step}</span>
+                    </li>
+                `).join('');
+
+          grid.appendChild(cardClone);
+        });
+      }
+    }
+
+    function updateNow() { if (nowEl) nowEl.textContent = new Date().toLocaleString('pt-BR', { dateStyle: 'long', timeStyle: 'short' }).replace(' às', ','); }
+
+    function handleMenuToggle() {
+      toggleMenu?.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
+        sidebar.classList.toggle('flex');
+      });
+    }
+
+    function activateRoute(hash) {
+      const key = (hash?.replace('#', '') || 'overview');
+      const info = routes[key] || routes.overview;
+      pageTitle.textContent = info.title; breadcrumb.textContent = info.title;
+      sections.forEach(sec => sec.classList.toggle('active', sec.id === key));
+      navLinks.forEach(a => {
+        const isActive = a.getAttribute('href') === '#' + key;
+        a.classList.toggle('bg-brand-500', isActive);
+        a.classList.toggle('text-white', isActive);
+        a.classList.toggle('dark:bg-brand-500', isActive);
+        a.classList.toggle('font-bold', isActive);
+        if (!isActive) a.classList.remove('text-white', 'font-bold');
+      });
+      if (window.innerWidth < 768 && !sidebar.classList.contains('hidden')) {
+        sidebar.classList.add('hidden');
+        sidebar.classList.remove('flex');
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function handleTheme() {
+      const root = document.documentElement;
+      const setTheme = (mode) => {
+        root.classList.toggle('dark', mode === 'dark');
+        localStorage.setItem('theme', mode);
+      };
+      const initialTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      setTheme(initialTheme);
+      themeToggle?.addEventListener('click', () => setTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCards();
+      updateNow(); setInterval(updateNow, 60_000);
+      handleMenuToggle();
+      window.addEventListener('hashchange', () => activateRoute(location.hash));
+      activateRoute(location.hash);
+      handleTheme();
+    });
+
+    const senhaCodificada = "c2VuaGFBZG1pbjEyMw==";
+    const senha = atob(senhaCodificada); // Decodifica a senha
+
+    var senhaDigitada = prompt("Digite a senha para acessar:");
+
+    if (senhaDigitada !== senha) {
+      document.body.innerHTML = "<h1>Acesso Negado</h1>";
+    }
+  </script>
 </body>
-
-<script>
-  var senha = prompt("Digite a senha para acessar:");
-  if (senha !== "senhaAdmin123") {
-    document.body.innerHTML = "<h1>Acesso Negado</h1>";
-  }
-</script>
-
 
 </html>
